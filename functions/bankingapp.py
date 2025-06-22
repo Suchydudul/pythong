@@ -10,6 +10,7 @@ def withdraw(balance):
     withdraw_amount = int(withdraw_amount)
     if withdraw_amount > balance:
         print("Not enough balance\n")
+        return balance
     else: 
         print(f"You withdrawn {withdraw_amount}$ \n")
         new_balance = balance - withdraw_amount

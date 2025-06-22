@@ -20,7 +20,7 @@ def power(x, y):
     z = x ** y
     return z
 
-def __main__():
+def main():
     print("Please provide 2 numbers")
     x = input(" x = ")
     y = input(" y = ")
@@ -47,4 +47,4 @@ def __main__():
     print(f"The result of {operator}ing {x} and {y} is: {result}")
 
 if __name__ == "__main__":
-    __main__()
+    main()

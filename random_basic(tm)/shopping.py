@@ -1,5 +1,5 @@
 shopping_cart = []
-print("Welcome to the cum shoppin center, ")
+print("Welcome to the dum shoppin center, ")
 while True:
     shopping_cart.append(input("Please let us know wha would you like to buy (type q to quit): "))
     if shopping_cart[len(shopping_cart) -1] == "q":

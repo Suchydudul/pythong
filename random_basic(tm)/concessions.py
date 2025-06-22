@@ -1,7 +1,7 @@
 menu = {
-    "cum":5,
-    "shit":3,
-    "piss":2
+    "dum":5,
+    "mint":3,
+    "diss":2
       }
 
 cart = []

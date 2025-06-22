@@ -30,21 +30,21 @@ def __main__():
     except ValueError:
         print("Invalid input. Please enter numeric values.")
         return
-    module = input("Please select a module (add, subtract, multiply, divide, power): ").lower()
-    if module == "add":
+    operator = input("Please select an operator (add, subtract, multiply, divide, power): ").lower()
+    if operator == "add":
         result = add(x, y)  
-    elif module == "subtract":
+    elif operator == "subtract":
         result = subtract(x, y) 
-    elif module == "multiply":  
+    elif operator == "multiply":  
         result = multiply(x, y)
-    elif module == "divide":
+    elif operator == "divide":
         result = divide(x, y)
-    elif module == "power":
+    elif operator == "power":
         result = power(x, y)
     else:
-        print("Invalid module selected.")
+        print("Invalid operator selected.")
         return
-    print(f"The result of {module}ing {x} and {y} is: {result}")
+    print(f"The result of {operator}ing {x} and {y} is: {result}")
 
 if __name__ == "__main__":
     __main__()

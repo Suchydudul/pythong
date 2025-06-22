@@ -1,2 +1,5 @@
-#def is_int(x):
-    #if x.isdigit() == False:
+def is_int(x):
+    if x.isdigit() == True:
+        return True
+    else:
+        return False

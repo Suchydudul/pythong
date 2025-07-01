@@ -51,7 +51,7 @@ def get_stats(path): #Searches the main directory for files and sub directories 
             name, extension = os.path.splitext(files[x])
             print(f" {name}, {extension}")
             if extension == ".py":
-                f = open(root+"\\"+ files[x])
+                f = open(root+"/"+ files[x])
                 lines = f.readlines()
                 for row in lines:
                     row = row.strip()

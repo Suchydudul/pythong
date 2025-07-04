@@ -27,6 +27,8 @@ def main():
     if os.path.exists("/home/_dudul/python/pythong-1/PyQt5_gui/icon.jpeg"):
         print("exist")
     app = QApplication(sys.argv)
+    app.setApplicationDisplayName("AlarmApp")
+    app.setDesktopFileName("AlarmApp")
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())

@@ -6,20 +6,19 @@ from PyQt5.QtGui import QIcon, QFont, QPixmap
 from PyQt5.QtCore import Qt, QTimer
 
 class MainWindow(QMainWindow):
+    current_time = time.asctime()[11:19]
     def update_time(self):
         current_time = time.asctime()[11:19]
         self.label.setText(f"Current time: {current_time}")
     
     def __init__ (self):
         super().__init__()
-
-        current_date = time.asctime()
         self.setWindowTitle("Testing GUI")
         self.setWindowIcon(QIcon("/home/_dudul/python/pythong-1/PyQt5_gui/images.png"))
         self.setGeometry(0,0,500,500)
 
 
-        self.label = QLabel(f"Current time: {current_date[11:19]}", self)
+        self.label = QLabel(f"Current time: {self.current_time}", self)
         self.label.setFont(QFont("Lora", 30))
         self.label.setGeometry(0,0,500,500)
         self.label.setStyleSheet("color: blue")

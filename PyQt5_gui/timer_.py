@@ -41,11 +41,15 @@ class MainWindow(QWidget):
         self.button.setEnabled(False)
         
     def showtime(self):
-        if self.seconds == 0:
+        if self.seconds < 0:
             self.timer.stop()
             self.button.setEnabled(True)
-        self.textbox.setText(str(self.seconds))
-        self.seconds -= 1
+            self.textbox.setText("Please set a time")
+            self.timer.timeout.disconnect(self.showtime)
+        else:
+            self.textbox.setText(str(self.seconds))
+            self.seconds -= 1
+
         
 
 def main():

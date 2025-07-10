@@ -3,13 +3,14 @@ import time
 from PyQt5.QtWidgets import QApplication, QWidget,QMainWindow, QLabel, QVBoxLayout, QPushButton, QLineEdit
 from PyQt5.QtCore import QTimer, QTime, Qt
 
-class Timer(QWidget):
+class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.setGeometry(700,300,500,500)
         self.textbox = QLabel("Please set a time", self)
         self.input_edit = QLineEdit(self)
         self.button =QPushButton("Submit", self)
+        self.timer = QTimer()
         self.initUI()
 
     def initUI(self):
@@ -34,25 +35,24 @@ class Timer(QWidget):
         self.button.clicked.connect(self.submit)
 
     def submit(self):
-        text = self.input_edit.text()
-
-        for second in range(int(text)):
-            self.textbox.setText(str(second))
-            app.processEvents
-            time.sleep(1)
-            print(second+1, flush=True)
-
-
-
-
-
+        self.seconds = int(self.input_edit.text())
+        self.timer.start(1000)
+        self.timer.timeout.connect(self.showtime)
+        self.button.setEnabled(False)
+        
+    def showtime(self):
+        if self.seconds == 0:
+            self.timer.stop()
+            self.button.setEnabled(True)
+        self.textbox.setText(str(self.seconds))
+        self.seconds -= 1
+        
 
 def main():
     app = QApplication(sys.argv)
-    timer = Timer()
+    timer = MainWindow()
     timer.show()
     sys.exit(app.exec_())
-
 
 
 

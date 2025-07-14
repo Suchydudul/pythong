@@ -1,7 +1,7 @@
 import sys 
 import time
-from PyQt5.QtWidgets import QApplication, QWidget,QMainWindow, QLabel, QVBoxLayout, QPushButton, QLineEdit
-from PyQt5.QtCore import QTimer, QTime, Qt
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QPushButton, QLineEdit
+from PyQt5.QtCore import QTimer, Qt
 
 class MainWindow(QWidget):
     def __init__(self):
